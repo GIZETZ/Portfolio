@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr" >
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <title>JATHE ITHIEL KOUAMÉ - Portfolio</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
-<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=Marhey:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -39,7 +38,6 @@ h1 {
     letter-spacing: 10px;
     color: #ebeeff;
   }
-
   100% {
     opacity: 1;
     letter-spacing: 0;
@@ -47,18 +45,140 @@ h1 {
   }
 }
 
-.hidden {
-  display: none;
-}
-
-html,
-body {
+html, body {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: url(https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/773ac512-567c-4316-81c9-511db0c8a094);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+  overflow: hidden;
+}
+
+/* STARS ANIMATION */
+#stars, #stars2, #stars3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 
+    778px 1267px #FFF, 1482px 1637px #FFF, 1176px 859px #FFF, 685px 1736px #FFF,
+    1562px 1629px #FFF, 985px 1837px #FFF, 1221px 1676px #FFF, 1742px 1808px #FFF,
+    365px 1125px #FFF, 1784px 758px #FFF, 492px 1350px #FFF, 1425px 1556px #FFF,
+    1148px 423px #FFF, 972px 1607px #FFF, 1042px 1058px #FFF, 1695px 1449px #FFF,
+    549px 1364px #FFF, 1876px 674px #FFF, 178px 1667px #FFF, 1456px 1017px #FFF,
+    1632px 1761px #FFF, 847px 1467px #FFF, 1485px 1180px #FFF, 1527px 1065px #FFF,
+    665px 1753px #FFF, 1722px 1221px #FFF, 1134px 1647px #FFF, 654px 1463px #FFF,
+    1875px 1344px #FFF, 1724px 1744px #FFF, 1762px 1022px #FFF, 1316px 1670px #FFF,
+    234px 456px #FFF, 789px 123px #FFF, 1543px 876px #FFF, 432px 1789px #FFF,
+    1098px 345px #FFF, 567px 1432px #FFF, 1876px 234px #FFF, 123px 1098px #FFF,
+    1345px 789px #FFF, 876px 1543px #FFF, 432px 567px #FFF, 1789px 123px #FFF,
+    234px 1876px #FFF, 1098px 432px #FFF, 567px 1345px #FFF, 789px 876px #FFF,
+    1543px 234px #FFF, 123px 1789px #FFF, 876px 567px #FFF, 1345px 1098px #FFF,
+    432px 789px #FFF, 1876px 1543px #FFF, 234px 876px #FFF, 567px 432px #FFF,
+    1098px 1789px #FFF, 123px 234px #FFF, 1543px 1876px #FFF, 789px 567px #FFF,
+    345px 1098px #FFF, 876px 123px #FFF, 1789px 1345px #FFF, 432px 876px #FFF,
+    567px 234px #FFF, 1876px 789px #FFF, 123px 1543px #FFF, 1345px 432px #FFF,
+    789px 1098px #FFF, 234px 567px #FFF, 876px 1789px #FFF, 1543px 123px #FFF,
+    432px 1345px #FFF, 1098px 876px #FFF, 567px 789px #FFF, 1789px 234px #FFF,
+    123px 1876px #FFF, 876px 432px #FFF, 1345px 567px #FFF, 789px 1098px #FFF;
+  animation: animStar 30s linear infinite;
+}
+
+#stars:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 
+    778px 1267px #FFF, 1482px 1637px #FFF, 1176px 859px #FFF, 685px 1736px #FFF,
+    1562px 1629px #FFF, 985px 1837px #FFF, 1221px 1676px #FFF, 1742px 1808px #FFF,
+    365px 1125px #FFF, 1784px 758px #FFF, 492px 1350px #FFF, 1425px 1556px #FFF,
+    1148px 423px #FFF, 972px 1607px #FFF, 1042px 1058px #FFF, 1695px 1449px #FFF,
+    549px 1364px #FFF, 1876px 674px #FFF, 178px 1667px #FFF, 1456px 1017px #FFF,
+    1632px 1761px #FFF, 847px 1467px #FFF, 1485px 1180px #FFF, 1527px 1065px #FFF,
+    665px 1753px #FFF, 1722px 1221px #FFF, 1134px 1647px #FFF, 654px 1463px #FFF,
+    1875px 1344px #FFF, 1724px 1744px #FFF, 1762px 1022px #FFF, 1316px 1670px #FFF,
+    234px 456px #FFF, 789px 123px #FFF, 1543px 876px #FFF, 432px 1789px #FFF,
+    1098px 345px #FFF, 567px 1432px #FFF, 1876px 234px #FFF, 123px 1098px #FFF,
+    1345px 789px #FFF, 876px 1543px #FFF, 432px 567px #FFF, 1789px 123px #FFF,
+    234px 1876px #FFF, 1098px 432px #FFF, 567px 1345px #FFF, 789px 876px #FFF,
+    1543px 234px #FFF, 123px 1789px #FFF, 876px 567px #FFF, 1345px 1098px #FFF;
+}
+
+#stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 
+    345px 1289px #FFF, 1654px 987px #FFF, 987px 1456px #FFF, 1298px 743px #FFF,
+    1876px 1234px #FFF, 456px 1678px #FFF, 1567px 1089px #FFF, 789px 1345px #FFF,
+    1234px 567px #FFF, 1789px 1123px #FFF, 678px 1567px #FFF, 1456px 890px #FFF,
+    234px 1456px #FFF, 789px 678px #FFF, 1567px 1234px #FFF, 432px 1789px #FFF,
+    1098px 456px #FFF, 567px 1345px #FFF, 1876px 789px #FFF, 123px 1098px #FFF,
+    1345px 234px #FFF, 876px 1567px #FFF, 432px 678px #FFF, 1789px 456px #FFF,
+    567px 1876px #FFF, 1098px 123px #FFF, 234px 1345px #FFF, 789px 876px #FFF,
+    1567px 432px #FFF, 456px 1789px #FFF, 1876px 567px #FFF, 123px 1098px #FFF,
+    876px 234px #FFF, 1345px 789px #FFF, 432px 1567px #FFF, 1789px 456px #FFF;
+  animation: animStar 60s linear infinite;
+}
+
+#stars2:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 
+    345px 1289px #FFF, 1654px 987px #FFF, 987px 1456px #FFF, 1298px 743px #FFF,
+    1876px 1234px #FFF, 456px 1678px #FFF, 1567px 1089px #FFF, 789px 1345px #FFF,
+    1234px 567px #FFF, 1789px 1123px #FFF, 678px 1567px #FFF, 1456px 890px #FFF,
+    234px 1456px #FFF, 789px 678px #FFF, 1567px 1234px #FFF, 432px 1789px #FFF,
+    1098px 456px #FFF, 567px 1345px #FFF, 1876px 789px #FFF, 123px 1098px #FFF;
+}
+
+#stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 
+    1234px 678px #FFF, 567px 1345px #FFF, 1789px 890px #FFF, 456px 1234px #FFF,
+    1567px 789px #FFF, 890px 1456px #FFF, 1345px 567px #FFF, 678px 1789px #FFF,
+    234px 1098px #FFF, 876px 456px #FFF, 1543px 789px #FFF, 432px 1345px #FFF,
+    1098px 567px #FFF, 789px 1876px #FFF, 1456px 234px #FFF, 567px 1098px #FFF,
+    1789px 876px #FFF, 123px 1456px #FFF, 876px 789px #FFF, 1345px 432px #FFF,
+    234px 1567px #FFF, 1098px 876px #FFF, 789px 123px #FFF, 1456px 1789px #FFF;
+  animation: animStar 90s linear infinite;
+}
+
+#stars3:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 
+    1234px 678px #FFF, 567px 1345px #FFF, 1789px 890px #FFF, 456px 1234px #FFF,
+    1567px 789px #FFF, 890px 1456px #FFF, 1345px 567px #FFF, 678px 1789px #FFF,
+    234px 1098px #FFF, 876px 456px #FFF, 1543px 789px #FFF, 432px 1345px #FFF;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
 }
 
 section {
@@ -70,9 +190,7 @@ section {
   height: 100vh;
 }
 
-/* ------------ */
 /* ICON STYLES */
-
 .icon-container {
   position: absolute;
   bottom: 18px;
@@ -109,11 +227,7 @@ section {
 
 .about {
   background: rgb(182, 164, 248);
-  background: linear-gradient(
-    30deg,
-    rgb(182, 164, 248) 0%,
-    rgb(75, 52, 159) 70%
-  );
+  background: linear-gradient(30deg, rgb(182, 164, 248) 0%, rgb(75, 52, 159) 70%);
 }
 
 .education {
@@ -123,25 +237,15 @@ section {
 
 .projects {
   background: rgb(169, 207, 124);
-  background: linear-gradient(
-    310deg,
-    rgb(169, 207, 124) 0%,
-    rgb(77, 120, 31) 60%
-  );
+  background: linear-gradient(310deg, rgb(169, 207, 124) 0%, rgb(77, 120, 31) 60%);
 }
 
 .contact {
   background-color: rgb(224, 129, 157);
-  background-image: linear-gradient(
-    340deg,
-    rgb(243, 151, 178) 0%,
-    rgb(147, 20, 58) 100%
-  );
+  background-image: linear-gradient(340deg, rgb(243, 151, 178) 0%, rgb(147, 20, 58) 100%);
 }
 
-/* ------- */
 /* POPUP */
-
 body.prevent-background-scroll {
   min-height: 100dvh;
   overflow-y: hidden;
@@ -149,10 +253,6 @@ body.prevent-background-scroll {
 
 .prevent-scroll {
   overflow: hidden;
-}
-
-#about {
-  display: block;
 }
 
 .popup {
@@ -168,7 +268,6 @@ body.prevent-background-scroll {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -273,9 +372,7 @@ body.prevent-background-scroll {
   transform: rotate(90deg);
 }
 
-/* --------- */
 /* SCROLLBAR */
-
 .popup-body::-webkit-scrollbar {
   width: 0.7rem;
 }
@@ -291,9 +388,7 @@ body.prevent-background-scroll {
   border-radius: 0.8rem;
 }
 
-/* ------ */
 /* ABOUT */
-
 .about-container {
   display: grid;
   grid-template-columns: 40% 50%;
@@ -334,14 +429,20 @@ body.prevent-background-scroll {
 .about-container .img-frame {
   overflow: hidden;
   width: 250px;
+  height: 300px;
   border-radius: 8px;
-  box-shadow: rgba(62, 63, 168, 0.8) 0px 10px 30px 8px,
-    rgba(62, 63, 168, 0.8) 0px 0px 0px 2px;
+  box-shadow: rgba(62, 63, 168, 0.8) 0px 10px 30px 8px, rgba(62, 63, 168, 0.8) 0px 0px 0px 2px;
+  background: linear-gradient(45deg, #b6a4f8, #4b349f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-container .img-frame img {
-  aspect-ratio: 6/7;
+  width: 90%;
+  height: 90%;
   object-fit: cover;
+  border-radius: 4px;
   transition: transform 1s;
 }
 
@@ -372,9 +473,7 @@ body.prevent-background-scroll {
   font-size: 0.9rem;
 }
 
-/* ------- */
 /* SKILLS */
-
 .skill-list {
   display: flex;
   flex-direction: column;
@@ -409,19 +508,13 @@ body.prevent-background-scroll {
   font-size: 0.9rem;
   font-weight: 500;
   border-radius: 5px;
-  background: linear-gradient(
-    130deg,
-    rgba(162, 234, 55, 0.7) 0%,
-    rgba(46, 152, 74, 0.5) 100%
-  );
+  background: linear-gradient(130deg, rgba(162, 234, 55, 0.7) 0%, rgba(46, 152, 74, 0.5) 100%);
   backdrop-filter: blur(30px);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 6px 10px;
 }
 
-/* --------- */
 /* PROJECTS */
-
 .project-container h1 {
   text-align: center;
   animation-delay: 0.8s;
@@ -507,9 +600,7 @@ body.prevent-background-scroll {
   font-size: 0.85rem;
 }
 
-/* ------------- */
 /* EDUCATION */
-
 .education-container h1 {
   text-align: center;
   margin-bottom: 40px;
@@ -570,9 +661,7 @@ body.prevent-background-scroll {
   font-size: 0.95rem;
 }
 
-/* -------- */
 /* CONTACT */
-
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -633,6 +722,7 @@ form {
 }
 
 input[type="text"],
+input[type="email"],
 select,
 textarea {
   font-size: 1rem;
@@ -648,6 +738,7 @@ textarea {
 }
 
 input[type="text"]:focus-visible,
+input[type="email"]:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
   border: 2px solid rgb(220, 20, 80);
@@ -672,6 +763,7 @@ input:-webkit-autofill:active {
   margin: 10px auto 0;
   cursor: pointer;
   font-size: 1.1rem;
+  border-radius: 4px;
 }
 
 .submit-btn::before {
@@ -696,6 +788,7 @@ input:-webkit-autofill:active {
   line-height: 1;
   transition: color 0.4s;
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 
@@ -703,6 +796,7 @@ input:-webkit-autofill:active {
   color: #000;
 }
 
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .popup-body {
     padding: 30px;
@@ -719,6 +813,7 @@ input:-webkit-autofill:active {
 
   .about-container .img-frame {
     width: 200px;
+    height: 240px;
     margin: 0 auto;
   }
 
@@ -739,408 +834,418 @@ input:-webkit-autofill:active {
 @media (max-width: 480px) {
   .about-container .img-frame {
     width: 180px;
+    height: 220px;
   }
   
   .project-box {
     height: auto;
     min-height: 250px;
   }
+  
+  .popup-body {
+    padding: 20px;
+  }
 }
 </style>
 
 </head>
 <body>
-<body>
-    <section>
-      <div class="icon-container">
-        <div class="icon-box about" data-modal="about">
-          <i class="fa-regular fa-address-card"></i>
-        </div>
-        <div class="icon-box projects" data-modal="projects">
-          <i class="fa-solid fa-laptop-code"></i>
-        </div>
-        <div class="icon-box education" data-modal="education">
-          <i class="fa-solid fa-graduation-cap"></i>
-        </div>
-        <div class="icon-box contact" data-modal="contact">
-          <i class="fa-solid fa-envelope"></i>
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+  
+  <section>
+    <div class="icon-container">
+      <div class="icon-box about" data-modal="about">
+        <i class="fa-regular fa-address-card"></i>
+      </div>
+      <div class="icon-box projects" data-modal="projects">
+        <i class="fa-solid fa-laptop-code"></i>
+      </div>
+      <div class="icon-box education" data-modal="education">
+        <i class="fa-solid fa-graduation-cap"></i>
+      </div>
+      <div class="icon-box contact" data-modal="contact">
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+    </div>
+  </section>
+
+  <div class="popup" id="about">
+    <div class="popup-container">
+      <div class="popup-header">
+        <div class="button-container">
+          <button class="close-btn circle-btn red">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button class="close-btn circle-btn yellow">
+            <i class="fa-solid fa-window-minimize"></i>
+          </button>
+          <button class="maximize-btn circle-btn green">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </button>
         </div>
       </div>
-    </section>
-
-    <div class="popup" id="about">
-      <div class="popup-container">
-        <div class="popup-header">
-          <div class="button-container">
-            <button class="close-btn circle-btn red">
-              <i class="fa-solid fa-xmark"></i>
-            </button>
-            <button class="close-btn circle-btn yellow">
-              <i class="fa-solid fa-window-minimize"></i>
-            </button>
-            <button class="maximize-btn circle-btn green">
-              <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-            </button>
-          </div>
-        </div>
-        <div class="popup-body about-container">
-          <div class="img-frame">
+      <div class="popup-body about-container">
+        <div class="img-frame">
+          <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #b6a4f8, #4b349f); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; text-align: center;">
             <img
-              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/1f842b2d-1245-497e-9a9e-b1cdb0da1eec"
+              src="public/img2.png"
               alt="JATHE ITHIEL KOUAMÉ" />
           </div>
-          <div class="hero-content">
-            <h1>JATHE ITHIEL KOUAMÉ</h1>
-            <p>
-              Étudiant en 3ème année de Systèmes Informatiques et Génie Logiciel (SIGL) à l'ESATIC, 
-              passionné par la programmation, le développement d'applications web et l'intégration de l'IA. 
-              Je conçois et déploie des solutions logicielles modernes, innovantes et adaptées aux besoins réels.
-            </p>
-            <p>
-              J'aime relever des défis complexes et apporter de la valeur ajoutée grâce à la technologie. 
-              Mon objectif est de devenir un ingénieur logiciel capable de créer des solutions impactantes.
-            </p>
+        </div>
+        <div class="hero-content">
+          <h1>JATHE ITHIEL KOUAMÉ</h1>
+          <p>
+            Étudiant en 3ème année de Systèmes Informatiques et Génie Logiciel (SIGL) à l'ESATIC, 
+            passionné par la programmation, le développement d'applications web et l'intégration de l'IA. 
+            Je conçois et déploie des solutions logicielles modernes, innovantes et adaptées aux besoins réels.
+          </p>
+          <p>
+            J'aime relever des défis complexes et apporter de la valeur ajoutée grâce à la technologie. 
+            Mon objectif est de devenir un ingénieur logiciel capable de créer des solutions impactantes.
+          </p>
+          
+          <div class="contact-info">
+            <span><i class="fa-solid fa-location-dot"></i>Treichville, Abidjan – Côte d'Ivoire</span>
+            <span><i class="fa-solid fa-envelope"></i>souralehkouame53@gmail.com</span>
+            <span><i class="fa-solid fa-phone"></i>(+225) 07 67 15 01 56</span>
+          </div>
+
+          <div class="languages">
+            <h3>Langues</h3>
+            <ul>
+              <li>Français (Natif)</li>
+              <li>Anglais (Courant)</li>
+              <li>Allemand (Notions)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup" id="projects">
+    <div class="popup-container">
+      <div class="popup-header">
+        <div class="button-container">
+          <button class="close-btn circle-btn red">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button class="close-btn circle-btn yellow">
+            <i class="fa-solid fa-window-minimize"></i>
+          </button>
+          <button class="maximize-btn circle-btn green">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="popup-body">
+        <div class="skill-list">
+          <h1>Compétences Techniques</h1>
+          <div class="skill-categories">
+            <div class="skill-category">
+              <h3>Langages de Programmation</h3>
+              <ul>
+                <li>JavaScript</li>
+                <li>PHP</li>
+                <li>Java</li>
+                <li>C</li>
+                <li>C++</li>
+                <li>Python</li>
+              </ul>
+            </div>
             
-            <div class="contact-info">
-              <span><i class="fa-solid fa-location-dot"></i>Treichville, Abidjan – Côte d'Ivoire</span>
-              <span><i class="fa-solid fa-envelope"></i>souralehkouame53@gmail.com</span>
-              <span><i class="fa-solid fa-phone"></i>(+225) 07 67 15 01 56</span>
+            <div class="skill-category">
+              <h3>Technologies/Frameworks Web</h3>
+              <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>ExpressJS</li>
+                <li>ReactJS</li>
+                <li>Django</li>
+                <li>NodeJS</li>
+                <li>TypeScript</li>
+                <li>Bootstrap</li>
+              </ul>
             </div>
 
-            <div class="languages">
-              <h3>Langues</h3>
+            <div class="skill-category">
+              <h3>Technologies Mobile</h3>
               <ul>
-                <li>Français (Natif)</li>
-                <li>Anglais (Courant)</li>
-                <li>Allemand (Notions)</li>
+                <li>Kotlin</li>
+                <li>Flutter</li>
+                <li>Capacitor</li>
+              </ul>
+            </div>
+            
+            <div class="skill-category">
+              <h3>Bases de Données</h3>
+              <ul>
+                <li>MySQL</li>
+                <li>PostgreSQL</li>
+                <li>SQLite</li>
+                <li>MariaDB</li>
+                <li>MongoDB</li>
+              </ul>
+            </div>
+            
+            <div class="skill-category">
+              <h3>Outils & IDE</h3>
+              <ul>
+                <li>Visual Studio Code</li>
+                <li>Qt</li>
+                <li>IntelliJ</li>
+                <li>PyCharm</li>
+                <li>Android Studio</li>
+                <li>StarUML</li>
+                <li>Eclipse</li>
+                <li>Docker</li>
+                <li>Microsoft Office</li>
               </ul>
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div class="popup" id="projects">
-      <div class="popup-container">
-        <div class="popup-header">
-          <div class="button-container">
-            <button class="close-btn circle-btn red">
-              <i class="fa-solid fa-xmark"></i>
-            </button>
-            <button class="close-btn circle-btn yellow">
-              <i class="fa-solid fa-window-minimize"></i>
-            </button>
-            <button class="maximize-btn circle-btn green">
-              <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-            </button>
-          </div>
-        </div>
-
-        <div class="popup-body">
-          <div class="skill-list">
-            <h1>Compétences Techniques</h1>
-            <div class="skill-categories">
-              <div class="skill-category">
-                <h3>Langages de Programmation</h3>
-                <ul>
-                  <li>Java</li>
-                  <li>C</li>
-                  <li>C++</li>
-                  <li>Python</li>
-                  <li>PHP</li>
-                  <li>JavaScript</li>
-                </ul>
+        <div class="project-container">
+          <h1>Projets & Réalisations</h1>
+          <div class="all-projects">
+            <div class="project-box">
+              <div class="project-header">
+                <i class="fa-solid fa-globe project-icon"></i>
+                <div>
+                  <h3>Gbairai</h3>
+                  <div class="role">Fondateur & Développeur</div>
+                </div>
               </div>
-              
-              <div class="skill-category">
-                <h3>Technologies Web</h3>
-                <ul>
-                  <li>HTML5</li>
-                  <li>CSS3</li>
-                  <li>ReactJS</li>
-                  <li>NodeJS</li>
-                  <li>TypeScript</li>
-                  <li>Bootstrap</li>
-                </ul>
-              </div>
-              
-              <div class="skill-category">
-                <h3>Bases de Données</h3>
-                <ul>
-                  <li>MySQL</li>
-                  <li>PostgreSQL</li>
-                  <li>SQLite</li>
-                  <li>MariaDB</li>
-                </ul>
-              </div>
-              
-              <div class="skill-category">
-                <h3>Outils & IDE</h3>
-                <ul>
-                  <li>Visual Studio Code</li>
-                  <li>Qt</li>
-                  <li>IntelliJ</li>
-                  <li>PyCharm</li>
-                  <li>Microsoft Office</li>
-                </ul>
+              <p>
+                Gbairai est une Progressive Web App (PWA) sociale ivoirienne permettant le partage anonyme d'histoires géolocalisées avec analyse d'émotion par IA.
+                L'application affiche une carte interactive colorée par émotions à travers la Côte d'Ivoire.
+              </p>
+              <div class="project-footer">
+                <a href="https://gbairai.onrender.com" target="_blank" class="project-link">
+                  <i class="fa-solid fa-external-link-alt"></i> Voir le projet
+                </a>
+                <span class="project-year">2024</span>
               </div>
             </div>
-          </div>
 
-          <div class="project-container">
-            <h1>Projets & Réalisations</h1>
-            <div class="all-projects">
-              <div class="project-box">
-                <div class="project-header">
-                  <i class="fa-solid fa-globe project-icon"></i>
-                  <div>
-                    <h3>Gbairai</h3>
-                    <div class="role">Fondateur & Développeur</div>
-                  </div>
-                </div>
-                <p>
-                  Plateforme en ligne permettant la publication et la consultation de contenus étudiants. 
-                  Une solution complète pour faciliter le partage de ressources académiques.
-                </p>
-                <div class="project-footer">
-                  <a href="https://gbairai.onrender.com" target="_blank" class="project-link">
-                    <i class="fa-solid fa-external-link-alt"></i> Voir le projet
-                  </a>
-                  <span class="project-year">2024</span>
+            <div class="project-box">
+              <div class="project-header">
+                <i class="fa-solid fa-calculator project-icon"></i>
+                <div>
+                  <h3>Math Solver CI</h3>
+                  <div class="role">Créateur & Développeur</div>
                 </div>
               </div>
+              <p>
+                PWA éducative intégrant une IA pour aider les étudiants à résoudre des problèmes mathématiques 
+                du programme du Lycée et Terminale.
+              </p>
+              <div class="project-footer">
+                <a href="https://mathsolverci.site" target="_blank" class="project-link">
+                  <i class="fa-solid fa-external-link-alt"></i> Voir le projet
+                </a>
+                <span class="project-year">2024</span>
+              </div>
+            </div>
 
-              <div class="project-box">
-                <div class="project-header">
-                  <i class="fa-solid fa-calculator project-icon"></i>
-                  <div>
-                    <h3>Math Solver CI</h3>
-                    <div class="role">Créateur & Développeur</div>
-                  </div>
-                </div>
-                <p>
-                  PWA éducative intégrant une IA pour aider les étudiants à résoudre des problèmes mathématiques 
-                  du programme du Lycée et Terminale.
-                </p>
-                <div class="project-footer">
-                  <a href="https://mathsolverci.site" target="_blank" class="project-link">
-                    <i class="fa-solid fa-external-link-alt"></i> Voir le projet
-                  </a>
-                  <span class="project-year">2024</span>
+            <div class="project-box">
+              <div class="project-header">
+                <i class="fa-solid fa-briefcase project-icon"></i>
+                <div>
+                  <h3>App2 Project – ESATIC</h3>
+                  <div class="role">Développeur Principal</div>
                 </div>
               </div>
+              <p>
+                Conception d'un site web reliant entreprises et étudiants talentueux, basé sur l'IA et le marketing digital. 
+                Projet classé parmi les meilleurs.
+              </p>
+              <div class="project-footer">
+                <span class="project-link">🏆 Projet primé</span>
+                <span class="project-year">2024</span>
+              </div>
+            </div>
 
-              <div class="project-box">
-                <div class="project-header">
-                  <i class="fa-solid fa-briefcase project-icon"></i>
-                  <div>
-                    <h3>App2 Project – ESATIC</h3>
-                    <div class="role">Développeur Principal</div>
-                  </div>
-                </div>
-                <p>
-                  Conception d'un site web reliant entreprises et étudiants talentueux, basé sur l'IA et le marketing digital. 
-                  Projet classé parmi les meilleurs.
-                </p>
-                <div class="project-footer">
-                  <span class="project-link">🏆 Projet primé</span>
-                  <span class="project-year">2024</span>
+            <div class="project-box">
+              <div class="project-header">
+                <i class="fa-solid fa-code project-icon"></i>
+                <div>
+                  <h3>Technovor Hackathon</h3>
+                  <div class="role">Participant – ESATIC</div>
                 </div>
               </div>
+              <p>
+                Conception d'un portail numérique pour faciliter le transfert de documents et d'informations internes. 
+                Développement en équipe sous contrainte de temps.
+              </p>
+              <div class="project-footer">
+                <span class="project-link">💻 Hackathon</span>
+                <span class="project-year">Mars 2024</span>
+              </div>
+            </div>
 
-              <div class="project-box">
-                <div class="project-header">
-                  <i class="fa-solid fa-code project-icon"></i>
-                  <div>
-                    <h3>Technovor Hackathon</h3>
-                    <div class="role">Participant – ESATIC</div>
-                  </div>
-                </div>
-                <p>
-                  Conception d'un portail numérique pour faciliter le transfert de documents et d'informations internes. 
-                  Développement en équipe sous contrainte de temps.
-                </p>
-                <div class="project-footer">
-                  <span class="project-link">💻 Hackathon</span>
-                  <span class="project-year">Mars 2024</span>
+            <div class="project-box">
+              <div class="project-header">
+                <i class="fa-solid fa-network-wired project-icon"></i>
+                <div>
+                  <h3>Hackathon Système Réseau</h3>
+                  <div class="role">Participant</div>
                 </div>
               </div>
+              <p>
+                Participation à une compétition de développement et mise en œuvre de solutions pratiques 
+                en réseau et logiciel durant la première année de licence.
+              </p>
+              <div class="project-footer">
+                <span class="project-link">🌐 Réseau & Logiciel</span>
+                <span class="project-year">2023</span>
+              </div>
+            </div>
 
-              <div class="project-box">
-                <div class="project-header">
-                  <i class="fa-solid fa-network-wired project-icon"></i>
-                  <div>
-                    <h3>Hackathon Système Réseau</h3>
-                    <div class="role">Participant</div>
-                  </div>
-                </div>
-                <p>
-                  Participation à une compétition de développement et mise en œuvre de solutions pratiques 
-                  en réseau et logiciel durant la première année de licence.
-                </p>
-                <div class="project-footer">
-                  <span class="project-link">🌐 Réseau & Logiciel</span>
-                  <span class="project-year">2023</span>
+            <div class="project-box">
+              <div class="project-header">
+                <i class="fa-solid fa-users project-icon"></i>
+                <div>
+                  <h3>Community Manager – ACE</h3>
+                  <div class="role">Gestionnaire Réseaux Sociaux</div>
                 </div>
               </div>
-
-              <div class="project-box">
-                <div class="project-header">
-                  <i class="fa-solid fa-users project-icon"></i>
-                  <div>
-                    <h3>Community Manager – ACE</h3>
-                    <div class="role">Gestionnaire Réseaux Sociaux</div>
-                  </div>
-                </div>
-                <p>
-                  Gestion des réseaux sociaux de l'Association Chrétienne Évangélique de l'ESATIC. 
-                  Création de contenu, animation communautaire et communication digitale.
-                </p>
-                <div class="project-footer">
-                  <span class="project-link">📱 Réseaux Sociaux</span>
-                  <span class="project-year">Depuis 2023</span>
-                </div>
+              <p>
+                Gestion des réseaux sociaux de l'Association Chrétienne Évangélique de l'ESATIC. 
+                Création de contenu, animation communautaire et communication digitale.
+              </p>
+              <div class="project-footer">
+                <span class="project-link">📱 Réseaux Sociaux</span>
+                <span class="project-year">Depuis 2023</span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="popup" id="education">
-      <div class="popup-container">
-        <div class="popup-header">
-          <div class="button-container">
-            <button class="close-btn circle-btn red">
-              <i class="fa-solid fa-xmark"></i>
-            </button>
-            <button class="close-btn circle-btn yellow">
-              <i class="fa-solid fa-window-minimize"></i>
-            </button>
-            <button class="maximize-btn circle-btn green">
-              <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-            </button>
+  <div class="popup" id="education">
+    <div class="popup-container">
+      <div class="popup-header">
+        <div class="button-container">
+          <button class="close-btn circle-btn red">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button class="close-btn circle-btn yellow">
+            <i class="fa-solid fa-window-minimize"></i>
+          </button>
+          <button class="maximize-btn circle-btn green">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </button>
+        </div>
+      </div>
+      <div class="popup-body education-container">
+        <h1>Éducation & Formation</h1>
+
+        <div class="education-timeline">
+          <div class="education-item">
+            <div class="education-year">2025-2026</div>
+            <div class="education-degree">Licence 3 - SIGL</div>
+            <div class="education-school">Systèmes Informatiques et Génie Logiciel - ESATIC</div>
+          </div>
+
+          <div class="education-item">
+            <div class="education-year">2024-2025</div>
+            <div class="education-degree">Licence 2 - SIGL</div>
+            <div class="education-school">Systèmes Informatiques et Génie Logiciel - ESATIC</div>
+          </div>
+
+          <div class="education-item">
+            <div class="education-year">2023-2024</div>
+            <div class="education-degree">Licence 1 - SIGL</div>
+            <div class="education-school">Systèmes Informatiques et Génie Logiciel - ESATIC</div>
+          </div>
+
+          <div class="education-item">
+            <div class="education-year">2022-2023</div>
+            <div class="education-degree">Baccalauréat Série D</div>
+            <div class="education-school">Lycée Scientifique, Yamoussoukro</div>
           </div>
         </div>
-        <div class="popup-body education-container">
-          <h1>Éducation & Formation</h1>
 
-          <div class="education-timeline">
-            <div class="education-item">
-              <div class="education-year">2025-2026</div>
-              <div class="education-degree">Licence 3 - SIGL</div>
-              <div class="education-school">Systèmes Informatiques et Génie Logiciel - ESATIC</div>
+        <div class="interests">
+          <h2>Centres d'Intérêt</h2>
+          <div class="interests-list">
+            <div class="interest-item">
+              <i class="fa-solid fa-robot"></i> Innovation Technologique & IA
             </div>
-
-            <div class="education-item">
-              <div class="education-year">2024-2025</div>
-              <div class="education-degree">Licence 2 - SIGL</div>
-              <div class="education-school">Systèmes Informatiques et Génie Logiciel - ESATIC</div>
+            <div class="interest-item">
+              <i class="fa-solid fa-basketball"></i> Basketball
             </div>
-
-            <div class="education-item">
-              <div class="education-year">2023-2024</div>
-              <div class="education-degree">Licence 1 - SIGL</div>
-              <div class="education-school">Systèmes Informatiques et Génie Logiciel - ESATIC</div>
-            </div>
-
-            <div class="education-item">
-              <div class="education-year">2022-2023</div>
-              <div class="education-degree">Baccalauréat Série D</div>
-              <div class="education-school">Lycée Scientifique, Yamoussoukro</div>
-            </div>
-          </div>
-
-          <div class="interests">
-            <h2>Centres d'Intérêt</h2>
-            <div class="interests-list">
-              <div class="interest-item">
-                <i class="fa-solid fa-robot"></i> Innovation Technologique & IA
-              </div>
-              <div class="interest-item">
-                <i class="fa-solid fa-basketball"></i> Basketball
-              </div>
-              <div class="interest-item">
-                <i class="fa-solid fa-palette"></i> Design & Créativité Digitale
-              </div>
+            <div class="interest-item">
+              <i class="fa-solid fa-palette"></i> Design & Créativité Digitale
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="popup" id="contact">
-      <div class="popup-container">
-        <div class="popup-header">
-          <div class="button-container">
-            <button class="close-btn circle-btn red">
-              <i class="fa-solid fa-xmark"></i>
-            </button>
-            <button class="close-btn circle-btn yellow">
-              <i class="fa-solid fa-window-minimize"></i>
-            </button>
-            <button class="maximize-btn circle-btn green">
-              <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-            </button>
-          </div>
+  <div class="popup" id="contact">
+    <div class="popup-container">
+      <div class="popup-header">
+        <div class="button-container">
+          <button class="close-btn circle-btn red">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button class="close-btn circle-btn yellow">
+            <i class="fa-solid fa-window-minimize"></i>
+          </button>
+          <button class="maximize-btn circle-btn green">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </button>
         </div>
-        <div class="popup-body contact-container">
-          <h1>Contact</h1>
-          <p>N'hésitez pas à me contacter pour toute collaboration ou opportunité !</p>
+      </div>
+      <div class="popup-body contact-container">
+        <h1>Contact</h1>
+        <p>N'hésitez pas à me contacter pour toute collaboration ou opportunité !</p>
+        
+        <div class="contact-details">
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <h3>Email</h3>
+            <p>souralehkouame53@gmail.com</p>
+          </div>
           
-          <div class="contact-details">
-            <div class="contact-item">
-              <i class="fa-solid fa-envelope"></i>
-              <h3>Email</h3>
-              <p>souralehkouame53@gmail.com</p>
-            </div>
-            
-            <div class="contact-item">
-              <i class="fa-solid fa-phone"></i>
-              <h3>Téléphone</h3>
-              <p>(+225) 07 67 15 01 56</p>
-            </div>
-            
-            <div class="contact-item">
-              <i class="fa-solid fa-location-dot"></i>
-              <h3>Localisation</h3>
-              <p>Treichville, Abidjan<br>Côte d'Ivoire</p>
-            </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <h3>Téléphone</h3>
+            <p>(+225) 07 67 15 01 56</p>
           </div>
-
-          <form>
-            <label for="name">Nom</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Votre nom.." />
-
-            <label for="email">Email</label>
-            <input
-              type="text"
-              id="email"
-              name="email"
-              placeholder="Votre email.." />
-
-            <label for="subject">Message</label>
-            <textarea
-              id="subject"
-              name="subject"
-              placeholder="Écrivez votre message.."
-              style="height: 200px"></textarea>
-
-            <button class="submit-btn" type="submit">
-              <span>Envoyer <i class="fa-solid fa-paper-plane"></i></span>
-            </button>
-          </form>
+          
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Localisation</h3>
+            <p>Treichville, Abidjan<br>Côte d'Ivoire</p>
+          </div>
         </div>
+
+        <form>
+          <label for="name">Nom</label>
+          <input type="text" id="name" name="name" placeholder="Votre nom.." required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Votre email.." required>
+
+          <label for="subject">Message</label>
+          <textarea id="subject" name="subject" placeholder="Écrivez votre message.." style="height: 200px" required></textarea>
+
+          <button class="submit-btn" type="submit">
+            <span>Envoyer <i class="fa-solid fa-paper-plane"></i></span>
+          </button>
+        </form>
       </div>
     </div>
-
-<script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></script>
-<script src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'></script>
-<script src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'></script>
+  </div>
 
 <script>
 const iconBoxes = document.querySelectorAll(".icon-box");
