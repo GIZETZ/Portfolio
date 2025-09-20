@@ -628,6 +628,97 @@ body.prevent-background-scroll {
   font-size: 1rem;
 }
 
+/* CERTIFICATIONS */
+.certifications {
+  margin-top: 30px;
+}
+
+.certifications h2 {
+  color: #f6c66e;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.certification-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.certification-item {
+  background: rgba(104, 104, 104, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  border-left: 4px solid #f6c66e;
+}
+
+.certification-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.certification-header i {
+  font-size: 2rem;
+  color: #f6c66e;
+}
+
+.certification-item h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.certification-provider {
+  color: #b6a4f8;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.certification-item p {
+  color: #f7f7f7;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.certification-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.skill-tag {
+  background: rgba(246, 198, 110, 0.3);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: #f6c66e;
+}
+
+.certification-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.certification-link {
+  color: #f6c66e;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.certification-link:hover {
+  text-decoration: underline;
+}
+
+.certification-year {
+  color: #ccc;
+  font-size: 0.85rem;
+}
+
 .interests {
   margin-top: 30px;
   text-align: center;
