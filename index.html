@@ -1,42 +1,409 @@
-<!--
-  Hit RUN to see this project in action!
-  
-  This project will auto-refresh as you edit the HTML, CSS and JS. See README.md for more info (including how to disable auto-refresh and install packages).
--->
 
 <!DOCTYPE html>
-<html>
-
+<html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Replit</title>
+  <meta charset="UTF-8">
+  <title>JATHE ITHIEL KOUAMÉ - Portfolio</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=Marhey:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
-  <main>
-    <h1 class="title">Welcome to HTML on Replit!</h1>
-    <p class="description">Get started by editing
-      <code class="code">index.html</code>. The webview will auto-refresh as you edit! (See <code
-        class="code">README.md</code> if you want to
-      disable auto-refresh.)
-    </p>
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+  
+  <section>
+    <div class="icon-container">
+      <div class="icon-box about" data-modal="about">
+        <i class="fa-regular fa-address-card"></i>
+      </div>
+      <div class="icon-box projects" data-modal="projects">
+        <i class="fa-solid fa-laptop-code"></i>
+      </div>
+      <div class="icon-box education" data-modal="education">
+        <i class="fa-solid fa-graduation-cap"></i>
+      </div>
+      <div class="icon-box contact" data-modal="contact">
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+    </div>
+  </section>
 
-    <section class="grid">
-      <a href="https://replit.com/learn" class='card'>
-        <h2>Learn &rarr;</h2>
-        <p>Find tutorials on Replit to learn more.</p>
-      </a>
+  <div class="popup" id="about">
+    <div class="popup-container">
+      <div class="popup-header">
+        <div class="button-container">
+          <button class="close-btn circle-btn red">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button class="close-btn circle-btn yellow">
+            <i class="fa-solid fa-window-minimize"></i>
+          </button>
+          <button class="maximize-btn circle-btn green">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </button>
+        </div>
+      </div>
+      <div class="popup-body about-container">
+        <div class="img-frame">
+          <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #b6a4f8, #4b349f); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; text-align: center;">
+            Photo Profil
+          </div>
+        </div>
+        <div class="hero-content">
+          <h1>JATHE ITHIEL KOUAMÉ</h1>
+          <p>
+            Étudiant en 3ème année de Systèmes Informatiques et Génie Logiciel (SIGL) à l'ESATIC, 
+            passionné par la programmation, le développement d'applications web et l'intégration de l'IA. 
+            Je conçois et déploie des solutions logicielles modernes, innovantes et adaptées aux besoins réels.
+          </p>
+          <p>
+            J'aime relever des défis complexes et apporter de la valeur ajoutée grâce à la technologie. 
+            Mon objectif est de devenir un ingénieur logiciel capable de créer des solutions impactantes.
+          </p>
+          
+          <div class="contact-info">
+            <span><i class="fa-solid fa-location-dot"></i>Treichville, Abidjan – Côte d'Ivoire</span>
+            <span><i class="fa-solid fa-envelope"></i>souralehkouame53@gmail.com</span>
+            <span><i class="fa-solid fa-phone"></i>(+225) 07 67 15 01 56</span>
+          </div>
 
-      <a href="https://docs.replit.com/category/deployments" class='card'>
-        <h2>Deploy &rarr;</h2>
-        <p>
-          After you are happy with this app, deploy it on Replit!
-        </p>
-      </a>
-    </section>
-  </main>
+          <div class="languages">
+            <h3>Langues</h3>
+            <ul>
+              <li>Français (Natif)</li>
+              <li>Anglais (Courant)</li>
+              <li>Allemand (Notions)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup" id="projects">
+    <div class="popup-container">
+      <div class="popup-header">
+        <div class="button-container">
+          <button class="close-btn circle-btn red">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button class="close-btn circle-btn yellow">
+            <i class="fa-solid fa-window-minimize"></i>
+          </button>
+          <button class="maximize-btn circle-btn green">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="popup-body">
+        <div class="skill-list">
+          <h1>Compétences Techniques</h1>
+          <div class="skill-categories">
+            <div class="skill-category">
+              <h3>Langages de Programmation</h3>
+              <ul>
+                <li>JavaScript</li>
+                <li>PHP</li>
+                <li>Java</li>
+                <li>C</li>
+                <li>C++</li>
+                <li>Python</li>
+              </ul>
+            </div>
+            
+            <div class="skill-category">
+              <h3>Technologies/Frameworks Web</h3>
+              <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>ExpressJS</li>
+                <li>ReactJS</li>
+                <li>Django</li>
+                <li>NodeJS</li>
+                <li>TypeScript</li>
+                <li>Bootstrap</li>
+              </ul>
+            </div>
+
+            <div class="skill-category">
+              <h3>Technologies Mobile</h3>
+              <ul>
+                <li>Kotlin</li>
+                <li>Flutter</li>
+                <li>Capacitor</li>
+              </ul>
+            </div>
+            
+            <div class="skill-category">
+              <h3>Bases de Données</h3>
+              <ul>
+                <li>MySQL</li>
+                <li>PostgreSQL</li>
+                <li>SQLite</li>
+                <li>MariaDB</li>
+                <li>MongoDB</li>
+              </ul>
+            </div>
+            
+            <div class="skill-category">
+              <h3>Outils & IDE</h3>
+              <ul>
+                <li>Visual Studio Code</li>
+                <li>Qt</li>
+                <li>IntelliJ</li>
+                <li>PyCharm</li>
+                <li>Android Studio</li>
+                <li>StarUML</li>
+                <li>Eclipse</li>
+                <li>Docker</li>
+                <li>Microsoft Office</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-container">
+          <h1>Projets & Réalisations</h1>
+          <div class="all-projects">
+            <div class="project-box">
+              <div class="project-header">
+                <i class="fa-solid fa-globe project-icon"></i>
+                <div>
+                  <h3>Gbairai</h3>
+                  <div class="role">Fondateur & Développeur</div>
+                </div>
+              </div>
+              <p>
+                Gbairai est une Progressive Web App (PWA) sociale ivoirienne permettant le partage anonyme d'histoires géolocalisées avec analyse d'émotion par IA.
+                L'application affiche une carte interactive colorée par émotions à travers la Côte d'Ivoire.
+              </p>
+              <div class="project-footer">
+                <a href="https://gbairai.onrender.com" target="_blank" class="project-link">
+                  <i class="fa-solid fa-external-link-alt"></i> Voir le projet
+                </a>
+                <span class="project-year">2024</span>
+              </div>
+            </div>
+
+            <div class="project-box">
+              <div class="project-header">
+                <i class="fa-solid fa-calculator project-icon"></i>
+                <div>
+                  <h3>Math Solver CI</h3>
+                  <div class="role">Créateur & Développeur</div>
+                </div>
+              </div>
+              <p>
+                PWA éducative intégrant une IA pour aider les étudiants à résoudre des problèmes mathématiques 
+                du programme du Lycée et Terminale.
+              </p>
+              <div class="project-footer">
+                <a href="https://mathsolverci.site" target="_blank" class="project-link">
+                  <i class="fa-solid fa-external-link-alt"></i> Voir le projet
+                </a>
+                <span class="project-year">2024</span>
+              </div>
+            </div>
+
+            <div class="project-box">
+              <div class="project-header">
+                <i class="fa-solid fa-briefcase project-icon"></i>
+                <div>
+                  <h3>App2 Project – ESATIC</h3>
+                  <div class="role">Développeur Principal</div>
+                </div>
+              </div>
+              <p>
+                Conception d'un site web reliant entreprises et étudiants talentueux, basé sur l'IA et le marketing digital. 
+                Projet classé parmi les meilleurs.
+              </p>
+              <div class="project-footer">
+                <span class="project-link">🏆 Projet primé</span>
+                <span class="project-year">2024</span>
+              </div>
+            </div>
+
+            <div class="project-box">
+              <div class="project-header">
+                <i class="fa-solid fa-code project-icon"></i>
+                <div>
+                  <h3>Technovor Hackathon</h3>
+                  <div class="role">Participant – ESATIC</div>
+                </div>
+              </div>
+              <p>
+                Conception d'un portail numérique pour faciliter le transfert de documents et d'informations internes. 
+                Développement en équipe sous contrainte de temps.
+              </p>
+              <div class="project-footer">
+                <span class="project-link">💻 Hackathon</span>
+                <span class="project-year">Mars 2024</span>
+              </div>
+            </div>
+
+            <div class="project-box">
+              <div class="project-header">
+                <i class="fa-solid fa-network-wired project-icon"></i>
+                <div>
+                  <h3>Hackathon Système Réseau</h3>
+                  <div class="role">Participant</div>
+                </div>
+              </div>
+              <p>
+                Participation à une compétition de développement et mise en œuvre de solutions pratiques 
+                en réseau et logiciel durant la première année de licence.
+              </p>
+              <div class="project-footer">
+                <span class="project-link">🌐 Réseau & Logiciel</span>
+                <span class="project-year">2023</span>
+              </div>
+            </div>
+
+            <div class="project-box">
+              <div class="project-header">
+                <i class="fa-solid fa-users project-icon"></i>
+                <div>
+                  <h3>Community Manager – ACE</h3>
+                  <div class="role">Gestionnaire Réseaux Sociaux</div>
+                </div>
+              </div>
+              <p>
+                Gestion des réseaux sociaux de l'Association Chrétienne Évangélique de l'ESATIC. 
+                Création de contenu, animation communautaire et communication digitale.
+              </p>
+              <div class="project-footer">
+                <span class="project-link">📱 Réseaux Sociaux</span>
+                <span class="project-year">Depuis 2023</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup" id="education">
+    <div class="popup-container">
+      <div class="popup-header">
+        <div class="button-container">
+          <button class="close-btn circle-btn red">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button class="close-btn circle-btn yellow">
+            <i class="fa-solid fa-window-minimize"></i>
+          </button>
+          <button class="maximize-btn circle-btn green">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </button>
+        </div>
+      </div>
+      <div class="popup-body education-container">
+        <h1>Éducation & Formation</h1>
+
+        <div class="education-timeline">
+          <div class="education-item">
+            <div class="education-year">2025-2026</div>
+            <div class="education-degree">Licence 3 - SIGL</div>
+            <div class="education-school">Systèmes Informatiques et Génie Logiciel - ESATIC</div>
+          </div>
+
+          <div class="education-item">
+            <div class="education-year">2024-2025</div>
+            <div class="education-degree">Licence 2 - SIGL</div>
+            <div class="education-school">Systèmes Informatiques et Génie Logiciel - ESATIC</div>
+          </div>
+
+          <div class="education-item">
+            <div class="education-year">2023-2024</div>
+            <div class="education-degree">Licence 1 - SIGL</div>
+            <div class="education-school">Systèmes Informatiques et Génie Logiciel - ESATIC</div>
+          </div>
+
+          <div class="education-item">
+            <div class="education-year">2022-2023</div>
+            <div class="education-degree">Baccalauréat Série D</div>
+            <div class="education-school">Lycée Scientifique, Yamoussoukro</div>
+          </div>
+        </div>
+
+        <div class="interests">
+          <h2>Centres d'Intérêt</h2>
+          <div class="interests-list">
+            <div class="interest-item">
+              <i class="fa-solid fa-robot"></i> Innovation Technologique & IA
+            </div>
+            <div class="interest-item">
+              <i class="fa-solid fa-basketball"></i> Basketball
+            </div>
+            <div class="interest-item">
+              <i class="fa-solid fa-palette"></i> Design & Créativité Digitale
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup" id="contact">
+    <div class="popup-container">
+      <div class="popup-header">
+        <div class="button-container">
+          <button class="close-btn circle-btn red">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button class="close-btn circle-btn yellow">
+            <i class="fa-solid fa-window-minimize"></i>
+          </button>
+          <button class="maximize-btn circle-btn green">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </button>
+        </div>
+      </div>
+      <div class="popup-body contact-container">
+        <h1>Contact</h1>
+        <p>N'hésitez pas à me contacter pour toute collaboration ou opportunité !</p>
+        
+        <div class="contact-details">
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <h3>Email</h3>
+            <p>souralehkouame53@gmail.com</p>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <h3>Téléphone</h3>
+            <p>(+225) 07 67 15 01 56</p>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Localisation</h3>
+            <p>Treichville, Abidjan<br>Côte d'Ivoire</p>
+          </div>
+        </div>
+
+        <form>
+          <label for="name">Nom</label>
+          <input type="text" id="name" name="name" placeholder="Votre nom.." required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Votre email.." required>
+
+          <label for="subject">Message</label>
+          <textarea id="subject" name="subject" placeholder="Écrivez votre message.." style="height: 200px" required></textarea>
+
+          <button class="submit-btn" type="submit">
+            <span>Envoyer <i class="fa-solid fa-paper-plane"></i></span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <script type="module" src="script.js"></script>
 
