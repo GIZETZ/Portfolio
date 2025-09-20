@@ -80,8 +80,25 @@ form.addEventListener('submit', function(e) {
   const message = document.getElementById('subject').value;
   
   if (name && email && message) {
-    alert('Merci pour votre message ! Je vous répondrai bientôt.');
-    form.reset();
+    // Créer l'URL mailto avec les informations du formulaire
+    const subject = encodeURIComponent(`Message de ${name} - Portfolio Contact`);
+    const body = encodeURIComponent(`Bonjour Jathe,
+
+${message}
+
+---
+De: ${name}
+Email: ${email}`);
+    
+    const mailtoLink = `mailto:souralehkouame53@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Ouvrir l'application email
+    window.location.href = mailtoLink;
+    
+    // Optionnel: réinitialiser le formulaire après un court délai
+    setTimeout(() => {
+      form.reset();
+    }, 1000);
   } else {
     alert('Veuillez remplir tous les champs.');
   }
