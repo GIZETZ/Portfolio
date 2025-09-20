@@ -719,78 +719,95 @@ body.prevent-background-scroll {
   font-size: 0.85rem;
 }
 
-/* CERTIFICATE DISPLAY */
-.certificate-display {
-  margin-top: 40px;
-  text-align: center;
-}
-
-.certificate-display h2 {
-  color: #f6c66e;
-  margin-bottom: 20px;
-}
-
-.certificate-viewer {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.certificate-link {
+/* CERTIFICATE DROPDOWN */
+.certificate-dropdown {
   position: relative;
   display: inline-block;
-  max-width: 400px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 30px;
+}
+
+.dropdown-btn {
+  background: transparent;
+  border: none;
+  color: #f6c66e;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.dropdown-btn:hover {
+  text-decoration: underline;
+}
+
+.dropdown-arrow {
   transition: transform 0.3s ease;
 }
 
-.certificate-link:hover {
-  transform: scale(1.05);
+.certificate-dropdown.active .dropdown-arrow {
+  transform: rotate(180deg);
 }
 
-.certificate-image {
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(246, 198, 110, 0.3);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 30px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  min-width: 250px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.certificate-dropdown.active .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-certificate {
   width: 100%;
   height: auto;
-  display: block;
-  transition: filter 0.3s ease;
-}
-
-.certificate-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  color: #fff;
-  font-size: 1.2rem;
-}
-
-.certificate-link:hover .certificate-overlay {
-  opacity: 1;
-}
-
-.certificate-overlay i {
-  font-size: 2rem;
+  border-radius: 8px;
   margin-bottom: 10px;
-  color: #f6c66e;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
 }
 
-.certificate-overlay span {
-  font-size: 0.9rem;
+.full-view-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f6c66e;
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 8px;
+  background: rgba(246, 198, 110, 0.1);
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.full-view-link:hover {
+  background: rgba(246, 198, 110, 0.2);
+  text-decoration: none;
 }
 
 @media (max-width: 480px) {
-  .certificate-link {
-    max-width: 300px;
+  .dropdown-content {
+    min-width: 200px;
+    right: 0;
+    left: auto;
   }
 }
 

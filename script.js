@@ -52,6 +52,24 @@ maximizeBtns.forEach((btn) => {
   });
 });
 
+// Certificate dropdown functionality
+const certificateDropdown = document.querySelector('.certificate-dropdown');
+const dropdownBtn = document.querySelector('.dropdown-btn');
+
+if (dropdownBtn) {
+  dropdownBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    certificateDropdown.classList.toggle('active');
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!certificateDropdown.contains(e.target)) {
+      certificateDropdown.classList.remove('active');
+    }
+  });
+}
+
 // Form submission
 const form = document.querySelector('form');
 form.addEventListener('submit', function(e) {
