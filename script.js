@@ -70,6 +70,20 @@ if (dropdownBtn) {
   });
 }
 
+// 3D Images effect
+document.addEventListener('DOMContentLoaded', () => {
+  const images = document.querySelectorAll('section > div:first-of-type img');
+  images.forEach(image => {
+    const maxLeft = window.innerWidth * 0.5 / 16;
+    const left = -Math.random() * maxLeft + 'rem';
+    const maxRight = window.innerWidth * 0.5 / 16;
+    const right = -Math.random() * maxRight + 'rem';
+
+    image.style.setProperty('--left', left);
+    image.style.setProperty('--right', right);
+  });
+});
+
 // Form submission
 const form = document.querySelector('form');
 form.addEventListener('submit', function(e) {
