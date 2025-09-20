@@ -184,6 +184,7 @@ section > div:first-of-type {
   perspective: 1000px;
   transform-style: preserve-3d;
   overflow: hidden;
+  contain: layout style paint;
 }
 
 .title {
@@ -215,6 +216,8 @@ section > div:first-of-type img {
   cursor: pointer;
   pointer-events: auto;
   user-select: none;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 section > div:first-of-type img:nth-of-type(odd) {

@@ -73,14 +73,30 @@ if (dropdownBtn) {
 // 3D Images effect
 document.addEventListener('DOMContentLoaded', () => {
   const images = document.querySelectorAll('section > div:first-of-type img');
-  images.forEach(image => {
-    const maxLeft = window.innerWidth * 0.5 / 16;
-    const left = -Math.random() * maxLeft + 'rem';
-    const maxRight = window.innerWidth * 0.5 / 16;
-    const right = -Math.random() * maxRight + 'rem';
+  
+  // Utiliser requestAnimationFrame pour une meilleure performance
+  requestAnimationFrame(() => {
+    images.forEach(image => {
+      const maxLeft = window.innerWidth * 0.3 / 16;
+      const left = -Math.random() * maxLeft + 'rem';
+      const maxRight = window.innerWidth * 0.3 / 16;
+      const right = -Math.random() * maxRight + 'rem';
 
-    image.style.setProperty('--left', left);
-    image.style.setProperty('--right', right);
+      image.style.setProperty('--left', left);
+      image.style.setProperty('--right', right);
+      
+      // Optimisation : arrêter l'animation quand l'image n'est pas visible
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+            entry.target.style.animationPlayState = 'paused';
+          } else {
+            entry.target.style.animationPlayState = 'running';
+          }
+        });
+      });
+      observer.observe(image);
+    });
   });
 });
 
