@@ -41,7 +41,7 @@ html, body {
   height: 100vh;
   width: 100%;
   background: 
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+    linear-gradient(rgba(78, 182, 243, 0.6), rgba(8, 79, 129, 0.7)),
     url('public/esatic.png') center/cover no-repeat,
     radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
   overflow: hidden;
@@ -563,6 +563,38 @@ body.prevent-background-scroll {
   font-size: 0.9rem;
 }
 
+/* CV DOWNLOAD BUTTON */
+.cv-download {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: linear-gradient(45deg, #b6a4f8, #4b349f);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: rgba(182, 164, 248, 0.4) 0px 4px 12px;
+}
+
+.cv-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(182, 164, 248, 0.6) 0px 6px 18px;
+  text-decoration: none;
+  color: white;
+}
+
+.cv-btn i {
+  font-size: 1rem;
+}
+
 /* SKILLS */
 .skill-list {
   display: flex;
@@ -928,7 +960,7 @@ body.prevent-background-scroll {
 }
 
 .interest-item {
-  background: rgba(246, 198, 110, 0.3);
+  background: rgba(233, 224, 209, 0.3);
   padding: 8px 15px;
   border-radius: 20px;
   font-size: 0.95rem;
